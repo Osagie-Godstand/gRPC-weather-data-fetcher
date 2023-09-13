@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package weather.v1;
+
+option go_package = "github.com/Osagie-Godstand/api/weather_v1";
+
+service WeatherService {
+    rpc GetWeather(WeatherRequest) returns (WeatherResponse);
+}
+
+message WeatherRequest {
+    string city = 1;
+    string country = 2;
+}
+
+message WeatherResponse {
+    string location = 1; 
+    string temperature = 2;
+    string conditions = 3;
+}
