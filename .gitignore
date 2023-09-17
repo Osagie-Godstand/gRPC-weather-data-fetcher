@@ -24,3 +24,7 @@ go.work
 
 bin
 *.app
+
+tls
+*.cert.perm
+*.key.perm
