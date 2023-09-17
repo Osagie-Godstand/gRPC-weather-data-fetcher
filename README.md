@@ -3,6 +3,9 @@ An Endpoint that efficiently serves secured weather data via gRPC and HTTP by co
 
 Using a self-signed TLS certicate that is PEM encoded but suitable for development purposes only.
 
+## Generate your own cert.pem and key.pem files with this simple command
+- go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
+
 ## Automating Program Compilation with a Makefile
 - To generate code from weather.proto file simply use: make compile
 - To build and run target simply use: make build-and-run
