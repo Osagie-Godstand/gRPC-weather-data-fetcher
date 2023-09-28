@@ -1,7 +1,7 @@
 # gRPC-weather-data-fetcher
 An Endpoint that efficiently serves secured weather data via gRPC and HTTP by combining Protocol Buffers, the Gorilla Mux router, and TLS (Transport Layer Security) encryption.
 
-Using a self-signed TLS certicate that is PEM encoded but suitable for development purposes only.
+Using a self-signed TLS certificate that is PEM encoded but suitable for development purposes only.
 
 
 ## Generate your own cert.pem and key.pem files with this simple command
