@@ -3,9 +3,16 @@ An Endpoint that efficiently serves secured weather data via gRPC and HTTP by co
 
 Using a self-signed TLS certificate that is PEM encoded but suitable for development purposes only.
 
+This link https://odmg.dev/project1 shows images of the program get request and response using both gRPC and http 
+
 
 ## Generate your own cert.pem and key.pem files with this simple command
 - go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
+
+## Installing and Running grpcurl command in the terminal 
+- go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+- github.com/fullstorydev/grpcurl/cmd/grpcurl
+- grpcurl -d '{"city": "Lisbon", "country": "Portugal"}' -import-path . -proto api/v1/weather.proto -cacert tls/cert.pem -servername localhost localhost:50051 weather.v1.WeatherService/GetWeather
 
 ## Automating Program Compilation with a Makefile
 - To generate code from weather.proto file simply use: make compile
