@@ -7,13 +7,12 @@ This link https://odmg.dev/project1 shows images of the program get request and 
 
 
 ## Generate your own cert.pem and key.pem files with this simple command
-go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
+- go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
 
 ## Installing and Running grpcurl command in the terminal 
 - go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
-- go get github.com/fullstorydev/grpcurl/cmd/grpcurl
-- after running the program use this command in terminal: 
-grpcurl -d '{"city": "Lisbon", "country": "Portugal"}' -import-path . -proto api/v1/weather.proto -cacert tls/cert.pem -servername localhost localhost:50051 weather.v1.WeatherService/GetWeather
+- go get github.com/fullstorydev/grpcurl/cmd/grpcurl 
+- grpcurl -d '{"city": "Lisbon", "country": "Portugal"}' -import-path . -proto api/v1/weather.proto -cacert tls/cert.pem -servername localhost localhost:50051 weather.v1.WeatherService/GetWeather
 
 ## Automating Program Compilation with a Makefile
 - To generate code from weather.proto file simply use: make compile
