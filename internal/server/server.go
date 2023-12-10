@@ -18,7 +18,7 @@ type WeatherServer struct {
 }
 
 // mustEmbedUnimplementedWeatherServiceServer implements weather_v1.WeatherServiceServer.
-func (*WeatherServer) mustEmbedUnimplementedWeatherServiceServer() {
+func (s *WeatherServer) mustEmbedUnimplementedWeatherServiceServer() {
 	panic("unimplemented")
 }
 

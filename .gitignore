@@ -26,5 +26,5 @@ bin
 *.app
 
 tls
-*.cert.perm
-*.key.perm
+*.cert.pem
+*.key.pem
