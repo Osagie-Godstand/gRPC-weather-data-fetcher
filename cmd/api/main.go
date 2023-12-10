@@ -67,8 +67,9 @@ func main() {
 		}
 	}()
 
-	router := setupRouter(grpcServerAddress, tlsConfig)
+	router := weatherRouter(grpcServerAddress, tlsConfig)
 
 	fmt.Printf("HTTP server is running on port %s...\n", httpServerPort)
 	http.ListenAndServe(httpServerPort, router)
 }
+

@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc/credentials"
 )
 
-func setupRouter(grpcServerAddress string, tlsConfig *tls.Config) *mux.Router {
+func weatherRouter(grpcServerAddress string, tlsConfig *tls.Config) *mux.Router {
 	router := mux.NewRouter()
 
 	// Defining an HTTP handler to handle weather requests with city and country.
